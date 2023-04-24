@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.17+commit.8df45f5f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/NftVotingSystem.sol": "NftVotingSystem"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/NftVotingSystem.sol": {
+			"keccak256": "0x1806727895d7be62ecc0d0b3677d34cd65cb0a7b16a6df39cc8e9aaa78e1050f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c053dc28d90cf0dd9c71e8254cdd2f066a065ee7f6dc91d6c6f5789193ec5650",
+				"dweb:/ipfs/QmaoJwi4Y74QNa6gH9xDtHJMYRmmWLDA2jtaB59Wr7npYg"
+			]
+		}
+	},
+	"version": 1
+}
