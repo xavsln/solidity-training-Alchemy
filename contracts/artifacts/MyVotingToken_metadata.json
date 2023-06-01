@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.17+commit.8df45f5f"
+		"version": "0.8.20+commit.a1b79de6"
 	},
 	"language": "Solidity",
 	"output": {
@@ -165,6 +165,19 @@
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_description",
+						"type": "string"
+					}
+				],
+				"name": "addProposal",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -337,6 +350,19 @@
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "getProposals",
+				"outputs": [
+					{
+						"internalType": "string[]",
+						"name": "",
+						"type": "string[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "address",
@@ -350,6 +376,25 @@
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "hasVoted",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
 					}
 				],
 				"stateMutability": "view",
@@ -438,6 +483,30 @@
 						"internalType": "address",
 						"name": "",
 						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "proposals",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "description",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "voteCount",
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -618,9 +687,52 @@
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_proposalIndex",
+						"type": "uint256"
+					}
+				],
+				"name": "voteForProposal",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "winningProposal",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
 			}
 		],
 		"devdoc": {
+			"events": {
+				"Approval(address,address,uint256)": {
+					"details": "Emitted when `owner` enables `approved` to manage the `tokenId` token."
+				},
+				"ApprovalForAll(address,address,bool)": {
+					"details": "Emitted when `owner` enables or disables (`approved`) `operator` to manage all of its assets."
+				},
+				"DelegateChanged(address,address,address)": {
+					"details": "Emitted when an account changes their delegate."
+				},
+				"DelegateVotesChanged(address,uint256,uint256)": {
+					"details": "Emitted when a token transfer or delegate change results in changes to a delegate's number of votes."
+				},
+				"Transfer(address,address,uint256)": {
+					"details": "Emitted when `tokenId` token is transferred from `from` to `to`."
+				}
+			},
 			"kind": "dev",
 			"methods": {
 				"DOMAIN_SEPARATOR()": {
@@ -708,7 +820,7 @@
 		"compilationTarget": {
 			"contracts/NftVotingSystem.sol": "MyVotingToken"
 		},
-		"evmVersion": "london",
+		"evmVersion": "shanghai",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -889,11 +1001,11 @@
 			]
 		},
 		"contracts/NftVotingSystem.sol": {
-			"keccak256": "0x1974638c322f79fc88b9b9f572456c57f6985d59e6b511becf82311ad93c4490",
+			"keccak256": "0xde161d0cea3f629aa7b5f6f820472bbaa5873dd7cd5301f058e38372508deec8",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://bd5076fd9b1e5ff58b550f1e7c19196169e063ed24397ea26060e6d2016314d4",
-				"dweb:/ipfs/QmXkZ39goy2kQjhhPdYeX6cRLQvdMeP9fUHX7X9GJByGMf"
+				"bzz-raw://7b4fe7efc614e6c2d9deca09201300bb1ed7abb07fab4fa8547a878c182f7c6b",
+				"dweb:/ipfs/QmUnT6Wg8AB4ef8WyPxgrR58NLZ8P5DVm4X8FwkCGDWc7c"
 			]
 		}
 	},
